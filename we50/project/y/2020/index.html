@@ -1,0 +1,81 @@
+<html>
+<head>
+	<style>
+    button{
+    	width:50%;
+    	height:120px;
+    	margin:auto;
+    	display: block;
+    }
+    p{
+    	margin-left:50px;
+    	font-size: 35px;
+    }
+    div,li{
+    	font-size: 35px;
+    	text-align:center;
+    }
+    input{
+    	width:100%;
+    	height:30px;
+    }
+	</style>
+	<script>
+		var name;
+		function myf(){
+			 name=prompt("enter name","Deepanshu");
+			 }
+		function mf(){
+			 alert("hello "+name)
+		}
+	
+		function fb(x){
+          
+          x.style.background="black";
+           var a=document.getElementById('i').value;
+           document.getElementById("p").style.color="blue";
+          document.getElementById("p").innerHTML=a;
+		}
+		function myf2(x){
+		
+          x.style.background="yellow";
+          x.style.color="red";
+		}
+		function fun(x){
+			x.style.background="green";
+		}
+		function fun1(x){
+          x.style.background="orange";
+        }
+        function f(){
+          var a=document.getElementById('i').value;
+           document.getElementById("p").style.color="blue";
+          document.getElementById("p").innerHTML=a;
+      }
+	</script>
+</head>	
+<body onload="myf()">	
+	<div id="di" style="background-color:green;width:100%; height:300px;" onmouseover="fun(this);" onmouseout="fun1(this);" > 	A HTML Program which demonstrates various events like onclick, ondbclick, onfocus, onblur, onchange, onmouseover, onmouseover, window event, onload, onunload event. <p id="p"></p></div>
+	<input id="i" onfocus="myf2(this)" onkeyup="f()" onblur="fb(this)" placeholder="onblur and onfocus and onchange(make all letter capital)"><br>
+	
+	<center>
+    <li id="d">ondblclick on hello</li>
+    </center>
+<button onclick="mf()" onmouseover="fun(this);" onmouseout="fun1(this);">onclick</button>
+<button ondblclick="mf()" onmouseover="fun(this);" onmouseout="fun1(this);">ondlbclick</button>
+<a href=https://www.google.com/>google</a>
+<script>
+	    document.getElementById("d").addEventListener("dblclick", myf1);
+	    document.getElementById("i").addEventListener("change", myFunction);
+		function myf1(){
+            x=name;
+			document.getElementById("d").innerHTML = "<br>"+"hello "+" "+x+" "+"how are you ";
+		}	
+		function myFunction() {
+      var x = document.getElementById("i");
+      x.value = x.value.toUpperCase();
+
+}
+</script>
+</body>	
+</html>
